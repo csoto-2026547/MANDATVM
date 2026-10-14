@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns="http://javafx.com/javafx/21.0.11" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.cristophersoto.system.controller.MainMenuController"
+      stylesheets="@../resources/styles/mainMenu.css"
+      spacing="15.0" prefWidth="900.0" prefHeight="500.0">
+    <padding>
+        <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+    </padding>
+    <VBox spacing="8.0" prefWidth="260.0">
+        <Label text="alumno"/>
+        <TextField fx:id="txtAlumno"/>
+        <Label text="empresa"/>
+        <TextField fx:id="txtEmpresa"/>
+        <Label text="telefono de oficina"/>
+        <TextField fx:id="txtTelefono"/>
+        <Label text="sector"/>
+        <ComboBox fx:id="cmbSector" maxWidth="Infinity" promptText="elige un sector"/>
+        <Button text="guardar" maxWidth="Infinity" onAction="#guardar"/>
+        <Button text="actualizar" maxWidth="Infinity" onAction="#actualizar"/>
+        <Button text="eliminar" maxWidth="Infinity" onAction="#eliminar"/>
+        <Button text="limpiar" maxWidth="Infinity" onAction="#limpiar"/>
+        <Button text="salir" maxWidth="Infinity" onAction="#salir"/>
+    </VBox>
+    <VBox HBox.hgrow="ALWAYS">
+        <TableView fx:id="tblAsignaciones" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colAlumno" text="alumno" prefWidth="170.0"/>
+                <TableColumn fx:id="colEmpresa" text="empresa" prefWidth="170.0"/>
+                <TableColumn fx:id="colTelefono" text="telefono" prefWidth="120.0"/>
+                <TableColumn fx:id="colSector" text="sector" prefWidth="120.0"/>
+            </columns>
+        </TableView>
+    </VBox>
+</HBox>

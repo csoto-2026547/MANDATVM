@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.11" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.cristophersoto.system.controller.LoginController"
+      stylesheets="@../resources/styles/login.css"
+      alignment="CENTER" spacing="10.0" prefWidth="340.0" prefHeight="320.0">
+    <padding>
+        <Insets top="30.0" right="40.0" bottom="30.0" left="40.0"/>
+    </padding>
+    <Label text="mandatvm" styleClass="titulo"/>
+    <Label text="usuario"/>
+    <TextField fx:id="txtUser" onAction="#ingresar"/>
+    <Label text="clave"/>
+    <PasswordField fx:id="txtPassword" onAction="#ingresar"/>
+    <Label fx:id="lblMensaje" styleClass="mensaje"/>
+    <Button text="ingresar" maxWidth="Infinity" onAction="#ingresar"/>
+</VBox>
